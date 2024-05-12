@@ -1,0 +1,17 @@
+<mat-card *ngIf="powersupply != undefined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{powersupply.name}}</mat-card-title>
+        <mat-card-subtitle>{{powersupply.wattage}} W</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Hatékonyság: {{powersupply.efficiency}}</li>
+        <li>Típus: {{powersupply.type}}</li>
+        <li>Moduláris: {{powersupply.modular}}</li>
+        <li>Ár: {{powersupply.price | dollarToHuf }}</li>
+      </ul>
+      <button color="accent" mat-raised-button [cdkCopyToClipboard]="powersupply.id">Azonosító másolása</button>
+    </mat-card-content>
+  </mat-card>

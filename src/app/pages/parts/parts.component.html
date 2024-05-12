@@ -1,0 +1,5 @@
+<div id="parts-wrapper">
+    <div id="selector-wrapper"><app-selector (catalogEmitter)="setCatalog($event)"></app-selector></div>
+
+    <app-viewer style="display: flex; padding: 16px 24px 48px 24px;" [catalog]="catalog"></app-viewer>
+</div>

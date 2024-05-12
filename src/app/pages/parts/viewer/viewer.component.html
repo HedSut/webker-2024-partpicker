@@ -1,0 +1,19 @@
+<div id="memory-wrapper" class="part-wrapper" *ngIf="partname == 'Memories'">
+  <app-memory-card class="part-card" [memory]="memory" *ngFor="let memory of memories"></app-memory-card>
+</div>
+
+<div id="motherboard-wrapper" class="part-wrapper" *ngIf="partname == 'Motherboards'">
+  <app-motherboard-card class="part-card" [motherboard]="motherboard" *ngFor="let motherboard of motherboards"></app-motherboard-card>
+</div>
+
+<div id="powersupply-wrapper" class="part-wrapper" *ngIf="partname == 'Powersupplies'">
+  <app-powersupply-card class="part-card" [powersupply]="powersupply" *ngFor="let powersupply of powersupplies"></app-powersupply-card>
+</div>
+
+<div id="processor-wrapper" class="part-wrapper" *ngIf="partname == 'Processors'">
+  <app-processor-card class="part-card" [processor]="processor" *ngFor="let processor of processors"></app-processor-card>
+</div>
+
+<div id="videocard-wrapper" class="part-wrapper" *ngIf="partname == 'Videocards'">
+  <app-videocard-card class="part-card" [videocard]="videocard" *ngFor="let videocard of videocards"></app-videocard-card>
+</div>

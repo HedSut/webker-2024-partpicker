@@ -1,0 +1,18 @@
+<div class="config-card">
+    <div class="config-changer">
+        <mat-form-field>
+            <mat-label>Mentett gépek</mat-label>
+            <mat-select [(ngModel)]="selectedConfigId" (selectionChange)="getConfig()">
+                <mat-option *ngFor="let config of configs" [value]="config.id">{{config.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="part-cards">
+        <app-motherboard-card class="part-card" [motherboard]="selectedMotherboard"></app-motherboard-card>
+        <app-memory-card class="part-card" [memory]="selectedMemory"></app-memory-card>
+        <app-processor-card class="part-card" [processor]="selectedProcessor"></app-processor-card>
+        <app-videocard-card class="part-card" [videocard]="selectedVideocard"></app-videocard-card>
+        <app-powersupply-card class="part-card" [powersupply]="selectedPowersupply"></app-powersupply-card>
+    </div>
+</div>

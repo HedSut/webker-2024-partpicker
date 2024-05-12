@@ -1,0 +1,17 @@
+<mat-card *ngIf="videocard != undefined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{videocard.name}}</mat-card-title>
+        <mat-card-subtitle>{{videocard.memory}} GB</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Chipset: {{videocard.chipset}}</li>
+        <li>Órajel: {{videocard.core_clock}}</li>
+        <li>Turbó órajel: {{videocard.boost_clock}} MHz</li>
+        <li>Ár: {{videocard.price | dollarToHuf }}</li>
+      </ul>
+      <button color="accent" mat-raised-button [cdkCopyToClipboard]="videocard.id">Azonosító másolása</button>
+    </mat-card-content>
+  </mat-card>

@@ -1,0 +1,114 @@
+<div class="back-panel">
+  <h1>Összeépítő</h1>
+<div class="content-wrapper">
+<form [formGroup]="configForm" (ngSubmit)="submit()">
+    <mat-accordion multi>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Alaplap
+              </mat-panel-title>
+              <mat-panel-description>
+                Írd be az alaplapod azonosítóját
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+                <mat-label for="motherboard">Alaplap: </mat-label>
+                <input matInput type="text" formControlName="motherboard" />
+            </mat-form-field>
+
+            <app-motherboard-card class="part-card" [motherboard]="selectedMotherboard"></app-motherboard-card>
+          </mat-expansion-panel>
+
+          
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Memória
+              </mat-panel-title>
+              <mat-panel-description>
+                Írd be a memóriád azonosítóját
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+                <mat-label for="motherboard">Memória: </mat-label>
+                <input matInput type="text" formControlName="memory" />
+            </mat-form-field>      
+            
+            <app-memory-card [memory]="selectedMemory"></app-memory-card>
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Processzor
+              </mat-panel-title>
+              <mat-panel-description>
+                Írd be a processzorod azonosítóját
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+                <mat-label for="processor">Processzor: </mat-label>
+                <input matInput type="text" formControlName="processor" />
+            </mat-form-field>      
+
+            <app-processor-card [processor]="selectedProcessor"></app-processor-card>
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Videókártya
+              </mat-panel-title>
+              <mat-panel-description>
+                Írd be a videókártyád azonosítóját
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+                <mat-label for="videocard">Videókártya: </mat-label>
+                <input matInput type="text" formControlName="videocard" />
+            </mat-form-field> 
+
+            <app-videocard-card [videocard]="selectedVideocard"></app-videocard-card>
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Tápegység
+              </mat-panel-title>
+              <mat-panel-description>
+                Írd be a tápegységed azonosítóját
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+                <mat-label for="powersupply">Tápegység: </mat-label>
+                <input matInput type="text" formControlName="powersupply" />
+            </mat-form-field>   
+            
+            <app-powersupply-card [powersupply]="selectedPowersupply"></app-powersupply-card>
+          </mat-expansion-panel>
+    </mat-accordion>
+
+    <div class="controls">
+      <button class="centered" mat-raised-button color="accent" (click)="updateForm()">Frissítés</button>
+    </div>
+
+    <div *ngIf="currentUser != null" class="controls">
+        <mat-form-field class="centered">
+            <mat-label for="configname">Név: </mat-label>
+            <input matInput type="text" formControlName="configname" />
+        </mat-form-field>        
+        <button id="save-button" class="centered" mat-raised-button color="primary" type="submit">Mentés</button>
+    </div>
+</form>
+</div>
+</div>

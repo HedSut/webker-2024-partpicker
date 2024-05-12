@@ -1,0 +1,21 @@
+<div class="selectors">
+    <mat-form-field id="parts-changer">
+        <mat-label>Alkatrészek</mat-label>
+        <mat-select [(ngModel)]="partname" (selectionChange)="getParts()">
+            <mat-option *ngFor="let part of parts" [value]="part.value">{{part.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+    <mat-paginator style="margin: unset; max-height: 56px; max-width: 212px" #paginator
+            class="paginator"
+            [length]="1300"
+            [pageSize]="20"
+            [showFirstLastButtons]="false"
+            [pageSizeOptions]="[20]"
+            [hidePageSize]="true"
+            [pageIndex]="currentpage"
+            aria-label="Select page"
+            (page)="goPage($event)">
+    </mat-paginator>
+</div>

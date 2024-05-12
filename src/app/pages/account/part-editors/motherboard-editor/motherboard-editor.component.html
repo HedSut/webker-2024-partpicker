@@ -1,0 +1,29 @@
+<div class="editor-field">
+    <mat-form-field>
+        <mat-label>Alaplap neve: </mat-label>
+        <input matInput type="text" [(ngModel)]="motherboardName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Ár: </mat-label>
+        <input matInput type="number" [(ngModel)]="motherboardPrice">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Foglalat: </mat-label>
+        <input matInput type="text" [(ngModel)]="motherboardSocket">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Méret: </mat-label>
+        <input matInput type="text" [(ngModel)]="motherboardFormfactor">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Maximum memória: </mat-label>
+        <input matInput type="number" [(ngModel)]="motherboardMaxmem">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Memória foglalatok: </mat-label>
+        <input matInput type="number" [(ngModel)]="motherboardMemoryslots">
+    </mat-form-field>
+</div>
+<div class="editor-button">
+  <button mat-raised-button (click)="UpdateMotherboard()">Frissítés</button>
+</div>

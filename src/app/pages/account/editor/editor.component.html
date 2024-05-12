@@ -1,0 +1,25 @@
+<h1 class="title">Alkatrész szerkesztő</h1>
+<div class="editor">
+    <div class="selector">
+        <mat-form-field>
+            <mat-label>Alkatrész típus</mat-label>
+            <mat-select [(ngModel)]="partname">
+                <mat-option *ngFor="let part of parts" [value]="part.value">{{part.name}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Alkatrész ID</mat-label>
+            <input matInput type="text" [(ngModel)]="partId">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="SearchPart()">Keresés</button>
+        <div id="feedback">{{feedbackMsg}}</div>
+    </div>
+    <div class="parts">
+        <app-memory-editor class="part-card" *ngIf="selectedMemory != undefined" [memory]="selectedMemory" (msgEmitter)="UpdateFeedback($event)"></app-memory-editor>
+        <app-motherboard-editor class="part-card" *ngIf="selectedMotherboard != undefined" [motherboard]="selectedMotherboard" (msgEmitter)="UpdateFeedback($event)"></app-motherboard-editor>
+        <app-processor-editor class="part-card" *ngIf="selectedProcessor != undefined" [processor]="selectedProcessor" (msgEmitter)="UpdateFeedback($event)"></app-processor-editor>
+        <app-videocard-editor class="part-card" *ngIf="selectedVideocard != undefined" [videocard]="selectedVideocard" (msgEmitter)="UpdateFeedback($event)"></app-videocard-editor>
+        <app-powersupply-editor class="part-card" *ngIf="selectedPowersupply != undefined" [powersupply]="selectedPowersupply" (msgEmitter)="UpdateFeedback($event)"></app-powersupply-editor>
+    </div>
+</div>

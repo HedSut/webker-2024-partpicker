@@ -1,0 +1,30 @@
+<div class="editor-field">
+    <mat-form-field>
+        <mat-label>Videókártya neve: </mat-label>
+        <input matInput type="text" [(ngModel)]="videocardName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Ár: </mat-label>
+        <input matInput type="number" [(ngModel)]="videocardPrice">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Memória méret: </mat-label>
+        <input matInput type="number" [(ngModel)]="videocardMemory">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Chipset: </mat-label>
+        <input matInput type="text" [(ngModel)]="videocardChipset">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Órajel: </mat-label>
+        <input matInput type="number" [(ngModel)]="videocardCore">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Turbózott órajel: </mat-label>
+        <input matInput type="number" [(ngModel)]="videocardBoost">
+    </mat-form-field>
+</div>
+<div class="editor-button">
+  <button mat-raised-button (click)="UpdateVideocard()">Frissítés</button>
+</div>
+

@@ -1,0 +1,18 @@
+<mat-card *ngIf="processor != undefined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{processor.name}}</mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+          <li>Magok száma: {{processor.core_count}}</li>
+          <li>Órajel: {{processor.core_clock}} GHz</li>
+          <li>Turbó órajel: {{processor.boost_clock}} GHz</li>
+          <li>TDP: {{processor.tdp}} W</li>
+          <li>Integrált grafika: {{processor.graphics}}</li>
+          <li>Ár: {{processor.price | dollarToHuf }}</li>
+      </ul>
+      <button color="accent" mat-raised-button [cdkCopyToClipboard]="processor.id">Azonosító másolása</button>
+    </mat-card-content>
+  </mat-card>

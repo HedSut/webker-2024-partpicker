@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pc-part-picker-dd7a9": {
+      "hosting": {
+        "pc-part-picker": [
+          "pc-part-picker-dd7a9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pc-part-picker-dd7a9"
+  }
+}

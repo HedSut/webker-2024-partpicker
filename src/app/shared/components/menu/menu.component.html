@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <div>PC Part Picker</div>
+    <div class="navigation-wrapper">
+        <ul class="navigation-items">
+            <li><a routerLink="/picker">Összeépítő</a></li>
+            <li><a routerLink="/parts">Alkatrészek</a></li>
+            <li *ngIf="currentUser == null"><a routerLink="/register">Regisztráció</a></li>
+            <li *ngIf="currentUser == null"><a routerLink="/login">Bejelentkezés</a></li>
+            <li *ngIf="currentUser != null"><a routerLink="/comparer">Összehasonlító</a></li>
+            <li *ngIf="currentUser != null"><a routerLink="/account">Kezelés</a></li>
+            <li *ngIf="currentUser != null"><a routerLink="/picker" (click)="logout()">Kijelentkezés</a></li>
+        </ul>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,28 @@
+<h1 class="title">Mentett gépek</h1>
+<div class="configs">
+  <mat-card class="part-card" *ngFor="let config of configs">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{config.name}}</mat-card-title>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="configs__details">
+        <ul>
+          <li>Alaplap: {{ config.motherboardname }}</li>
+          <li>Memória: {{ config.memoryname }}</li>
+          <li>Processzor: {{ config.processorname }}</li>
+        </ul>
+        <ul>
+          <li>Videókártya: {{ config.videocardname }}</li>
+          <li>Tápegység: {{ config.powersupplyname }}</li>
+        </ul>
+      </div>
+        <button mat-raised-button color="warn" (click)="deleteConfig(config.id)">Törlés</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="editor">
+  <app-editor></app-editor>
+</div>

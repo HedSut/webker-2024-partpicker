@@ -1,0 +1,29 @@
+<div class="editor-field">
+    <mat-form-field>
+        <mat-label>Tápegység neve: </mat-label>
+        <input matInput type="text" [(ngModel)]="powersupplyName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Ár: </mat-label>
+        <input matInput type="number" [(ngModel)]="powersupplyPrice">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Méret: </mat-label>
+        <input matInput type="text" [(ngModel)]="powersupplyType">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Hatékonyság: </mat-label>
+        <input matInput type="text" [(ngModel)]="powersupplyEfficency">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Teljesítmény: </mat-label>
+        <input matInput type="number" [(ngModel)]="powersupplyWatt">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Moduláris: </mat-label>
+        <input matInput type="text" [(ngModel)]="powersupplyMod">
+    </mat-form-field>
+</div>
+<div class="editor-button">
+  <button mat-raised-button (click)="UpdatePowersupply()">Frissítés</button>
+</div>

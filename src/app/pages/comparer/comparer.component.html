@@ -1,0 +1,7 @@
+<div *ngIf="configs.length == 0">
+    <h1>Nincs elmentett géped!</h1>
+</div>
+<div *ngIf="configs.length != 0">
+    <app-config-viewer [configs]="configs"></app-config-viewer>
+    <app-config-viewer [configs]="configs"></app-config-viewer>
+</div>

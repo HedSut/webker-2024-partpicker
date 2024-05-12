@@ -1,0 +1,33 @@
+<div class="editor-field">
+    <mat-form-field>
+        <mat-label>Processzor neve: </mat-label>
+        <input matInput type="text" [(ngModel)]="processorName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Ár: </mat-label>
+        <input matInput type="number" [(ngModel)]="processorPrice">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Magok száma: </mat-label>
+        <input matInput type="number" [(ngModel)]="processorCoreCount">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Alap órajel: </mat-label>
+        <input matInput type="number" [(ngModel)]="processorCoreClock">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Turbózott órajel: </mat-label>
+        <input matInput type="number" [(ngModel)]="processorBoost">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Integrált grafika: </mat-label>
+        <input matInput type="text" [(ngModel)]="processorGraphics">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>TDP: </mat-label>
+        <input matInput type="number" [(ngModel)]="processorTdp">
+    </mat-form-field>
+</div>
+<div class="editor-button">
+  <button mat-raised-button (click)="UpdateProcessor()">Frissítés</button>
+</div>

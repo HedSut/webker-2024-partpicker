@@ -1,0 +1,17 @@
+<mat-card *ngIf="motherboard != undefined">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>{{motherboard.name}}</mat-card-title>
+        <mat-card-subtitle>{{motherboard.socket}} foglalat</mat-card-subtitle>
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <ul>
+        <li>Méret: {{motherboard.form_factor}}</li>
+        <li>Maximális memória: {{motherboard.max_memory}} GB</li>
+        <li>Memória foglalatok: {{motherboard.memory_slots}}</li>
+        <li>Ár: {{motherboard.price | dollarToHuf }}</li>
+      </ul>
+      <button color="accent" mat-raised-button [cdkCopyToClipboard]="motherboard.id">Azonosító másolása</button>
+    </mat-card-content>
+  </mat-card>

@@ -1,0 +1,24 @@
+<div id="login-wrapper">
+    <span class="loading-indicator" *ngIf="loading">
+        <mat-spinner></mat-spinner>
+    </span>
+
+    <h1>Bejelentkezés</h1>
+    <div class="main_component">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <mat-form-field>
+                <mat-label for="email">Email: </mat-label>
+                <input matInput type="email" formControlName="email">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="password">Jelszó: </mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
+            <div id="login-buttons">
+                <div class="buttons">
+                    <button mat-raised-button color="accent" type="submit">Bejelentkezés</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
